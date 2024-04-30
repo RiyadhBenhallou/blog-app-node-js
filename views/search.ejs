@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+
+<%- include("partials/search.ejs") %>
+  <div class="container">
+    <%- include("partials/header.ejs") %>
+  <main class="main">
+    <div class="author">
+        <h1 class="author_heading">
+          Search results
+        </h1>
+    </div> 
+
+    <section class="articles">
+
+        <ul class="article-ul">
+            <% data.forEach(post => { %>
+            <li>
+              <a href="/post/<%= post._id %>">
+                <span><%= post.title %></span>
+                <span class="article-list_date"><%= post.createdAt.toDateString() %></span>
+              </a>
+            </li>
+            <% }) %>
+          </ul>
+
+    </section>  
+</main>
+    <%- include("partials/footer.ejs") %>
+  </div>
+
+    
+  <script src="js/script.js"></script>
+</body>
+</html>
+
