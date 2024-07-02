@@ -17,9 +17,6 @@
     "url": "https://github.com/codesandbox-app/static-template/issues"
   },
   "homepage": "https://github.com/codesandbox-app/static-template#readme",
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  },
   "dependencies": {
     "bcrypt": "^5.1.1",
     "connect-mongo": "^5.1.0",
